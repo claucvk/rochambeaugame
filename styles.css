@@ -4,33 +4,40 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 
 .human {
-  background: blue;
+  background: ;
   border: black solid 3px;
+  width: 410px;
+  height: 480px;
 }
 
 .robot {
-  background: green;
+  background: ;
   border: red solid 3px;
-  width: 500px;
-  height: 570px;
+  width: 410px;
+  height: 480px;
 }
 
 .score {
   background: red;
   border: blue solid 3px;
-  width: 270px;
-  height: 240px;
+  width: 240px;
+  height: 170px;
 }
 
 .result {
   background: yellow;
   border: blue solid 3px;
-  width: 270px;
-  height: 240px;
+  width: 240px;
+  height: 170px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 30px;
 }
