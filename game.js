@@ -1,4 +1,6 @@
-// var userChoice = prompt("Do you choose rock, paper or scissors?");
+//var userChoice = prompt('Do you choose rock, paper or scissors?');
+
+// How computer choose rock, paper or scissors
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
 	computerChoice = "rock";
@@ -7,7 +9,7 @@ if (computerChoice < 0.34) {
 } else {
 	computerChoice = "scissors";
 } console.log("Computer: " + computerChoice);
-
+// Comparing computer and user choice to see who wins or if it's a tie result
 var compare = function(choice1, choice2) {
     if (choice1 === choice2) {
         return "The result is a tie!";
