@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
 <head>
-<script src="game.js"></script>
+<script src="script.js"></script>
 <link rel="stylesheet" href ="styles.css"></link>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -12,10 +12,11 @@
       <hr>
       <h2>Do you choose rock, paper or scissors?</h2>
       <center><div id="imgHuman">
-          <img src="images/rock.png" alt="rock" height="70" width="70">
-          <img src="images/paper.png" alt="paper" height="70" width="70">
-          <img src="images/scissor.png" alt="scissor" height="70" width="70">
+          <button onclick="userComputerChoices('rock')"><img id="rockChoice" src="images/rock.png" alt="rock" height="70" width="70"></button>
+          <button onclick="userComputerChoices('paper')"><img id="paperChoice" src="images/paper.png" alt="paper" height="70" width="70"></button>
+          <button onclick="userComputerChoices('scissors')"><img id="scissorsChoice" src="images/scissor.png" alt="scissors" height="70" width="70"></button>
       </div></center>
+       <p id="humaResult"></p>
     </div>
 
     <div class=score>
@@ -29,16 +30,18 @@
     <div class=result>
       <center><h2>Human/Robot wins!</h2></center>
       <hr>
+      <p id="roundResult"></p>
     </div>
     <div class=robot>
       <center><img src="images/robot.png" alt="robot player" height="85" width="85"> <h1>Robot</h1></center>
       <hr>
       <h2>Try to win me. I bet you can't do it!</h2>
       <center><div id="imgRobot">
-        <img src="images/rock.png" alt="rock" height="70" width="70">
-        <img src="images/paper.png" alt="paper" height="70" width="70">
-        <img src="images/scissor.png" alt="scissor" height="70" width="70">
+        <img id="rockChoice" src="images/rock.png" alt="rock" height="70" width="70">
+        <img id="paperChoice" src="images/paper.png" alt="paper" height="70" width="70">
+        <img id="scissorsChoice" src="images/scissor.png" alt="scissors" height="70" width="70">
       </div></center>
+      <p id="computerResult"></p>
     </div>
     <form>
   <input type="button" value="Reset score" onclick="msg()">
