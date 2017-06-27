@@ -30,9 +30,11 @@ function userComputerChoices(choice) {
   var choice2 = computerChoice();
   var result = compare(choice1, choice2);
   document.getElementById('roundResult').innerHTML = result;
+  document.getElementById('userScore').innerHTML = 'Human ' + userScore;
+  document.getElementById('computerScore').innerHTML = 'Robot ' + computerScore;
 };
 
-function clickEvent() {
+function userClick() {
   var rockChoice = document.getElementById('rockChoice');
   var paperChoice = document.getElementById('paperChoice');
   var scissorsChoice = document.getElementById('scissorsChoice');
@@ -50,34 +52,44 @@ function clickEvent() {
     userComputerChoices();
   });
 
-  scissors.addEventListener('click', function() {
+  scissors.addEventListener('click', function () {
     userComputerChoices();
   });
 };
 
+var userScore = 0;
+var computerScore = 0;
+
 function compare(choice1, choice2) {
   if (choice1 === choice2) {
     return 'The result is a tie!';
-  } else if (choice1 === "rock") {
-    if (choice2 === "scissors") {
-      return "rock wins";
+  } else if (choice1 === 'rock') {
+    if (choice2 === 'scissors') {
+      ++userScore;
+      return 'Human wins!';
     } else {
-      return "paper wins";
+      ++computerScore;
+      return 'Robot wins!';
     }
-  } else if (choice1 === "paper") {
-    if (choice2 === "rock") {
-      return "paper wins";
+  } else if (choice1 === 'paper') {
+    if (choice2 === 'rock') {
+      ++userScore;
+      return 'Human wins!';
     } else {
-      return "scissors wins";
+      ++computerScore;
+      return 'Robot wins!';
     }
-  } else if (choice1 === "scissors") {
-    if (choice2 === "rock") {
-      return "rock wins";
+  } else if (choice1 === 'scissors') {
+    if (choice2 === 'rock') {
+      ++computerScore;
+      return 'Robot wins!';
     } else {
-      return "scissors wins";
+      ++userScore;
+      return 'Human wins!';
     }
   }
 };
 
-function score() {
+function restartGame() {
+  document.location.href = '';
 }

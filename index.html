@@ -23,12 +23,12 @@
       <center><h2>Score</h2></center>
       <hr>
       <center><table>
-        <td>X</td>
-        <td>X</td>
+        <td id="userScore">X</td>
+        <td id="computerScore">X</td>
       </table></center>
     </div>
     <div class=result>
-      <center><h2>Human/Robot wins!</h2></center>
+      <center><h2>Who's the winner?</h2></center>
       <hr>
       <p id="roundResult"></p>
     </div>
@@ -44,8 +44,7 @@
       <p id="computerResult"></p>
     </div>
     <form>
-  <input type="button" value="Reset score" onclick="msg()">
-  <input type="button" value="Save score" onclick="msg()">
+  <input type="button" value="Restart Game" onclick="restartGame()">
 </form>
   </div>
 </body>
